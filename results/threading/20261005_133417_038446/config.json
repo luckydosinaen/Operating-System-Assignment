@@ -1,0 +1,78 @@
+{
+  "images": 10000,
+  "repetitions": 3,
+  "warmup_images_per_run": 50,
+  "batch": "data_batch_1.bin",
+  "batch_sha256": "cee916563c9f80d84e3cc88e17fdc0941787f1244f00a67874d45b261883ada5",
+  "configurations": [
+    [
+      "sequential",
+      1
+    ],
+    [
+      "threading",
+      2
+    ],
+    [
+      "threading",
+      4
+    ]
+  ],
+  "workloads": [
+    "light",
+    "heavy"
+  ],
+  "transforms": {
+    "resize": [
+      64,
+      64
+    ],
+    "resampling": "BILINEAR",
+    "light": [
+      "resize",
+      "grayscale"
+    ],
+    "heavy": [
+      "resize",
+      "rotate",
+      "gaussian_blur",
+      "sharpen",
+      "color",
+      "find_edges"
+    ],
+    "rotation_degrees": 15,
+    "rotation_expand": false,
+    "blur_radius": 2,
+    "color_factor": 1.2
+  },
+  "chunk_size_images": 100,
+  "max_queued_chunks": "2 * workers",
+  "rss_sample_every_consumed_images": 100,
+  "input_read_only": true,
+  "order": "rotate six conditions by two positions each repetition",
+  "timer_includes": [
+    "image conversion",
+    "transforms",
+    "to bytes",
+    "ordered SHA256",
+    "RSS sampling",
+    "thread pool startup/shutdown",
+    "task scheduling/waiting"
+  ],
+  "timer_excludes": [
+    "interpreter startup",
+    "dataset loading",
+    "warmup",
+    "CSV/plots"
+  ],
+  "speedup_reference": "mean sequential time for the same workload in this suite",
+  "source_sha256": {
+    "main.py": "82177f9f0290e8acd03284a1fb6530e85822b0f167ecf727fb83cf65dbb63e5f",
+    "src\\dataset.py": "06e411e97b7660b08abc66dd241489e3cbcc0a17834466a6ac41c9373dee09c6",
+    "src\\image_processing.py": "ca80b105b124c5df560a32e4b3cd6cce4138d299008681766ba6dcd126c7e62e",
+    "src\\sequential.py": "5862c54c97037a5866ed634277641fc29b16c852a3cbfc300cd546b6b45dd7dc",
+    "src\\threading_processing.py": "ba4b91b9e82801c7a06b2276b9a03fd700f6957dded62c2b8324e212869280ba",
+    "src\\threading_experiment.py": "e5244391eced1801ab5a7eb43d1bb0b71704b4c71ebb16c1fce88f308f918e14",
+    "src\\threading_reporting.py": "fe2cbde536be2e6b28a64bddf54002dce48ebc63dde2d5c0271b3a68e27bad80"
+  }
+}

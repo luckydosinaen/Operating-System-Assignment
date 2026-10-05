@@ -1,0 +1,37 @@
+{
+  "source_url": "https://cave.cs.toronto.edu/kriz/cifar-10-binary.tar.gz",
+  "archive_md5": "c32a1d4ab5d03f1284b67883e8d87530",
+  "training_images": 50000,
+  "test_images": 10000,
+  "total_images": 60000,
+  "batch_counts": {
+    "data_batch_1.bin": 10000,
+    "data_batch_2.bin": 10000,
+    "data_batch_3.bin": 10000,
+    "data_batch_4.bin": 10000,
+    "data_batch_5.bin": 10000,
+    "test_batch.bin": 10000
+  },
+  "initial_experiment_batch": "data_batch_1.bin",
+  "initial_experiment_images": 10000,
+  "image_shape": [
+    32,
+    32,
+    3
+  ],
+  "dtype": "uint8",
+  "classes": [
+    "airplane",
+    "automobile",
+    "bird",
+    "cat",
+    "deer",
+    "dog",
+    "frog",
+    "horse",
+    "ship",
+    "truck"
+  ],
+  "sample_label": "frog",
+  "sample_path": "C:\\Lucky\\Binus University\\S9\\Operating System\\Operating-System-Assignment\\data\\sample_image.png"
+}

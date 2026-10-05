@@ -1,0 +1,8 @@
+numpy
+pillow
+psutil
+pandas
+matplotlib
+ipykernel
+nbformat
+nbclient

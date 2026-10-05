@@ -1,0 +1,56 @@
+{
+  "images": 10000,
+  "repetitions": 3,
+  "warmup_images_per_workload": 50,
+  "batch": "data_batch_1.bin",
+  "batch_sha256": "cee916563c9f80d84e3cc88e17fdc0941787f1244f00a67874d45b261883ada5",
+  "method": "sequential",
+  "workers": 1,
+  "rss_sample_every_images": 100,
+  "transforms": {
+    "resize": [
+      64,
+      64
+    ],
+    "resampling": "BILINEAR",
+    "light": [
+      "resize",
+      "grayscale"
+    ],
+    "heavy": [
+      "resize",
+      "rotate",
+      "gaussian_blur",
+      "sharpen",
+      "color",
+      "find_edges"
+    ],
+    "rotation_degrees": 15,
+    "rotation_expand": false,
+    "blur_radius": 2,
+    "color_factor": 1.2
+  },
+  "order": "light/heavy then heavy/light, alternating",
+  "timer_includes": [
+    "array-to-image",
+    "transforms",
+    "output hashing",
+    "loop",
+    "RSS sampling"
+  ],
+  "timer_excludes": [
+    "download",
+    "load dataset",
+    "warmup",
+    "CSV",
+    "figures",
+    "process startup"
+  ],
+  "source_sha256": {
+    "main.py": "2c17053b94cb9c0b74c0e8f6c783dbad015432d390f94f3675ff56072016908a",
+    "src\\dataset.py": "06e411e97b7660b08abc66dd241489e3cbcc0a17834466a6ac41c9373dee09c6",
+    "src\\image_processing.py": "ca80b105b124c5df560a32e4b3cd6cce4138d299008681766ba6dcd126c7e62e",
+    "src\\sequential.py": "5862c54c97037a5866ed634277641fc29b16c852a3cbfc300cd546b6b45dd7dc",
+    "src\\reporting.py": "619492a218391653223ac76de0d564ff12fbb6500e3b84c6caaef9df043a5fc2"
+  }
+}

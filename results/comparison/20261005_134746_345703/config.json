@@ -1,0 +1,84 @@
+{
+  "images": 10000,
+  "repetitions": 3,
+  "warmup_images_in_parent": 50,
+  "worker_warmup": false,
+  "batch": "data_batch_1.bin",
+  "batch_sha256": "cee916563c9f80d84e3cc88e17fdc0941787f1244f00a67874d45b261883ada5",
+  "methods": [
+    [
+      "sequential",
+      1
+    ],
+    [
+      "threading",
+      2
+    ],
+    [
+      "threading",
+      4
+    ],
+    [
+      "multiprocessing",
+      2
+    ],
+    [
+      "multiprocessing",
+      4
+    ]
+  ],
+  "transforms": {
+    "resize": [
+      64,
+      64
+    ],
+    "resampling": "BILINEAR",
+    "light": [
+      "resize",
+      "grayscale"
+    ],
+    "heavy": [
+      "resize",
+      "rotate",
+      "gaussian_blur",
+      "sharpen",
+      "color",
+      "find_edges"
+    ],
+    "rotation_degrees": 15,
+    "rotation_expand": false,
+    "blur_radius": 2,
+    "color_factor": 1.2
+  },
+  "process_start_method": "spawn",
+  "chunk_size_images": 100,
+  "max_unconsumed_tasks": "2 * workers",
+  "resource_sample_interval_s": 0.05,
+  "resource_scope": "parent + live descendant processes",
+  "ram_metric": "maximum simultaneous sum of RSS samples; shared pages may be double-counted",
+  "cpu_metric": "parent CPU delta + last observed cumulative CPU of each child; approximate",
+  "order": "rotate ten conditions by three positions per repetition",
+  "timer_includes": [
+    "conversion/transforms",
+    "ordered output SHA256",
+    "task scheduling",
+    "pool startup/shutdown",
+    "IPC and serialization for process",
+    "resource monitoring overhead"
+  ],
+  "timer_excludes": [
+    "measurement interpreter startup",
+    "dataset load",
+    "parent warmup",
+    "reports"
+  ],
+  "source_sha256": {
+    "main.py": "3b12fc29135ddafba5778cc73fcd5cfefef259e0b9af1853b21ed694b06f8eb0",
+    "src\\dataset.py": "06e411e97b7660b08abc66dd241489e3cbcc0a17834466a6ac41c9373dee09c6",
+    "src\\image_processing.py": "ca80b105b124c5df560a32e4b3cd6cce4138d299008681766ba6dcd126c7e62e",
+    "src\\resource_monitor.py": "15739fcb633a4de7e83208da3c8d783be6f495516e097c40936ee0e9236405c9",
+    "src\\parallel_processing.py": "6ee5322c661f6f526ab7d26b3dd4094ebc5d3ecb2eaee3a16dd840cffb71959e",
+    "src\\comparison_experiment.py": "e3f7ad29aa20f797168eff34ee77f363ed8d245c21f6d22b155b1eb0a812dfff",
+    "src\\comparison_reporting.py": "cd7f4c8bb8ee6aaa8317e295c80ac1516eecd36c7562d210c6d839d8b89bfa89"
+  }
+}

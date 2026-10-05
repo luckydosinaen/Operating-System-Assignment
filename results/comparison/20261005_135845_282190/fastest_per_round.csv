@@ -1,0 +1,15 @@
+workload,run,configuration,time_s
+heavy,1,multiprocessing_4,1.9126426000148056
+heavy,2,multiprocessing_4,1.9377726999809963
+heavy,3,multiprocessing_4,2.058382899966091
+heavy,4,multiprocessing_4,1.9548768000677228
+heavy,5,multiprocessing_4,1.952295699971728
+heavy,6,multiprocessing_4,1.8963890000013637
+heavy,7,multiprocessing_4,1.9646439999341965
+light,1,sequential_1,0.5879876998951659
+light,2,sequential_1,0.5690703999716789
+light,3,sequential_1,0.554077300010249
+light,4,sequential_1,0.5897007000166923
+light,5,sequential_1,0.6066247000126168
+light,6,sequential_1,0.5771737999748439
+light,7,sequential_1,0.6128622000105679

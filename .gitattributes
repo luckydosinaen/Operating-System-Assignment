@@ -1,0 +1,4 @@
+# Preserve original bytes, including archived evidence and SHA256 manifests.
+* -text
+*.bin binary
+*.png binary

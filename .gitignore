@@ -1,0 +1,14 @@
+# Local environment and Python caches only; datasets and experimental evidence are tracked.
+.venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.DS_Store
+Thumbs.db
+# Duplicate download archive exceeds GitHub's regular-file size limit.
+data/cifar-10-binary.tar.gz
+data/*.part
+# Credentials must never be published.
+.env
+.env.*

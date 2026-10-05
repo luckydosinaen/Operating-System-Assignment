@@ -1,0 +1,8 @@
+{
+  "reason": "Split graph headings into two lines to avoid clipping",
+  "measurements_rerun": false,
+  "measurement_csv_sha256_before": "2347c49189540ad88724493646e7684aab56a122f34953ea7e1b4f3fa7ecf008",
+  "measurement_csv_sha256_after": "2347c49189540ad88724493646e7684aab56a122f34953ea7e1b4f3fa7ecf008",
+  "report_source_sha256": "e8b17728a8fc3d3ccf722f04b71ab79ef5d8a92c4dca25f008eab3373e2b5e1b",
+  "report_source_snapshot": "source_snapshot/comparison_reporting_layout_revision.py"
+}

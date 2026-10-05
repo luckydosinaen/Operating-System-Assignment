@@ -1,0 +1,20 @@
+{
+  "timestamp": "2026-10-05T13:19:22.842292+07:00",
+  "run_id": "20261005_131922_842292",
+  "os": "Windows-10-10.0.26200-SP0",
+  "python": "3.11.9",
+  "python_executable": "C:\\Lucky\\Binus University\\S9\\Operating System\\Operating-System-Assignment\\.venv\\Scripts\\python.exe",
+  "cpu": "Intel(R) Core(TM) Ultra 9 185H",
+  "physical_cores": 16,
+  "logical_cpus": 22,
+  "total_ram_gib": 31.43492889404297,
+  "execution": "local/on-premise",
+  "benchmark_pid": 44052,
+  "libraries": {
+    "numpy": "2.4.6",
+    "pillow": "12.3.0",
+    "psutil": "7.2.2",
+    "pandas": "3.0.6",
+    "matplotlib": "3.11.2"
+  }
+}
